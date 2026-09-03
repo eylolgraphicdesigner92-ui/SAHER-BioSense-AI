@@ -1,0 +1,350 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7f5;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+header {
+    background: #123c2a;
+    color: white;
+    padding: 25px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 32px;
+}
+
+header p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+main {
+    width: 92%;
+    max-width: 900px;
+    margin: 25px auto;
+}
+
+.welcome {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.welcome h2 {
+    margin-bottom: 8px;
+}
+
+.status {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.card strong {
+    font-size: 25px;
+}
+
+.dashboard {
+    background: white;
+    margin-top: 20px;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard h2 {
+    margin-bottom: 15px;
+}
+
+.dashboard p {
+    margin: 10px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+@media (max-width: 500px) {
+
+    .status {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+    .risk-map,
+.alerts {
+    background: white;
+    margin-top: 20px;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.risk-map h2,
+.alerts h2 {
+    margin-bottom: 18px;
+}
+
+.map {
+    height: 260px;
+    background: #dfe9df;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #c7d5c9;
+}
+
+.zone {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.zone-green {
+    top: 25px;
+    right: 40px;
+}
+
+.zone-yellow {
+    top: 110px;
+    left: 80px;
+}
+
+.zone-orange {
+    bottom: 25px;
+    right: 130px;
+}
+
+.zone-red {
+    top: 70px;
+    right: 170px;
+}
+
+.location {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    background: white;
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+.legend {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+    font-size: 13px;
+}
+
+.alert {
+    padding: 15px;
+    border-radius: 12px;
+    background: #f7f7f7;
+    margin-top: 12px;
+}
+
+.alert strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.alert p {
+    font-size: 14px;
+}
+
+@media (max-width: 500px) {
+
+    .map {
+        height: 230px;
+    }
+
+    .zone {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+
+    .zone-orange {
+        right: 100px;
+    }
+
+    .zone-red {
+        right: 130px;
+    }
+}    font-size: 27px;
+    }
+
+    .welcome h2 {
+        font-size: 20px;
+    }
+}
+.control-panel {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.control-panel button {
+    border: none;
+    padding: 13px 20px;
+    border-radius: 12px;
+    font-size: 15px;
+    cursor: pointer;
+    background: #123c2a;
+    color: white;
+}
+
+.control-panel button:active {
+    transform: scale(0.97);
+}
+
+.control-panel p {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #666;
+}
+.risk-meter {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+.risk-circle {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    border: 15px solid #dfe8e2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.risk-value {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.risk-value small {
+    font-size: 18px;
+}
+
+.risk-info {
+    text-align: center;
+}
+
+.risk-info h3 {
+    margin-bottom: 8px;
+}
+
+.risk-info p {
+    font-size: 14px;
+    color: #666;
+}
+/* ================================
+   عداد خطر الحريق
+================================ */
+
+.risk-meter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px 0;
+}
+
+.risk-circle {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    
+    background:
+        conic-gradient(
+            #e63946 0deg,
+            #e63946 280deg,
+            #dfe8e2 280deg,
+            #dfe8e2 360deg
+        );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.risk-circle::before {
+    content: "";
+    position: absolute;
+
+    width: 135px;
+    height: 135px;
+
+    background: white;
+
+    border-radius: 50%;
+}
+
+.risk-value {
+    position: relative;
+    z-index: 2;
+
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.risk-value small {
+    font-size: 18px;
+}
+
+.risk-info {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.risk-info h3 {
+    margin-bottom: 8px;
+}
+
+.risk-info p {
+    color: #666;
+    font-size: 14px;
+}

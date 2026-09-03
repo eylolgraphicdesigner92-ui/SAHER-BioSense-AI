@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SAHER BioSense AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- رأس المنصة -->
+    <header>
+        <h1>🌲 SAHER</h1>
+        <p>BioSense AI</p>
+        <span>منظومة ذكية لحماية الغابات</span>
+    </header>
+
+
+    <main>
+
+        <!-- الترحيب -->
+        <section class="welcome">
+
+            <h2>🌿 مرحبًا بك في SAHER</h2>
+
+            <p>
+                منصة ذكية لمراقبة البيئة والتنبؤ المبكر
+                بخطر حرائق الغابات
+            </p>
+
+        </section>
+
+
+        <!-- مؤشرات البيئة الحالية -->
+      <div class="control-panel">
+
+    <button onclick="updateSensorData()">
+        🔄 تحديث بيانات المستشعرات
+    </button>
+
+    <p id="lastUpdate">
+        آخر تحديث: الآن
+    </p>
+
+      </div>
+        <section class="environment">
+
+            <h2>📊 مؤشرات البيئة الحالية</h2>
+div class="status">
+
+        <div class="card">
+            <div class="icon">🔥</div>
+            <h3>مستوى الخطر</h3>
+            <strong id="riskLevel">جارٍ التحليل...</strong>
+            <p>تحليل SAHER AI</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🌡️</div>
+            <h3>درجة الحرارة</h3>
+            <strong id="temperature">--°C</strong>
+            <p>القراءة الحالية</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">💧</div>
+            <h3>رطوبة الهواء</h3>
+            <strong id="humidity">--%</strong>
+            <p>القراءة الحالية</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🌱</div>
+            <h3>رطوبة التربة</h3>
+            <strong id="soilMoisture">--%</strong>
+            <p>القراءة الحالية</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">💨</div>
+            <h3>سرعة الرياح</h3>
+            <strong id="windSpeed">-- km/h</strong>
+            <p>القراءة الحالية</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">📡</div>
+            <h3>المستشعرات</h3>
+            <strong id="sensorCount">24</strong>
+            <p>مستشعر نشط</p>
+        </div>
+
+    </div>
+
+        </section>
+            <div class="status">
+
+                <!-- مستوى الخطر -->
+                <div class="card">
+                    <div class="icon">🔥</div>
+                    <h3>مستوى الخطر</h3>
+                    <strong class="danger">مرتفع</strong>
+                    <p>مؤشر الخطر الحالي</p>
+                </div>
+
+
+                <!-- الحرارة -->
+                <div class="card">
+
+                    <div class="icon">🌡️</div>
+
+                    <h3>درجة الحرارة</h3>
+
+                    <strong>38°C</strong>
+
+                    <p>درجة الحرارة الحالية</p>
+
+                </div>
+
+
+                <!-- الرطوبة -->
+                <div class="card">
+
+                    <div class="icon">💧</div>
+
+                    <h3>رطوبة الهواء</h3>
+
+                    <strong>18%</strong>
+
+                    <p>الرطوبة الحالية</p>
+
+                </div>
+
+
+                <!-- رطوبة التربة -->
+                <div class="card">
+
+                    <div class="icon">🌱</div>
+
+                    <h3>رطوبة التربة</h3>
+
+                    <strong>12%</strong>
+
+                    <p>حالة التربة</p>
+
+                </div>
+
+
+                <!-- الرياح -->
+                <div class="card">
+
+                    <div class="icon">💨</div>
+
+                    <h3>سرعة الرياح</h3>
+
+                    <strong>25 km/h</strong>
+
+                    <p>السرعة الحالية</p>
+
+                </div>
+
+
+                <!-- حالة النظام -->
+                <div class="card">
+
+                    <div class="icon">📡</div>
+
+                    <h3>المستشعرات</h3>
+
+                    <strong>24</strong>
+
+                    <p>مستشعر نشط</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- مؤشر الخطر -->
+        <section class="risk">
+
+            <h2>🔥 مؤشر خطر الحريق</h2>
+
+    <div class="risk-meter">
+
+        <div class="risk-circle">
+
+            <div class="risk-value">
+                <span id="riskScore">0</span>
+                <small>%</small>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="risk-info">
+
+        <h3 id="riskText">جارٍ تحليل البيانات...</h3>
+
+
+                    <p>
+                        تشير البيانات الحالية إلى ارتفاع
+                        مستوى خطر الحرائق.
+                    </p>
+
+                </>
+
+            </>
+
+        </section>
+
+
+        <!-- خريطة الخطر -->
+        <section class="risk-map">
+
+            <h2>🗺️ خريطة خطر الحرائق</h2>
+
+            <div class="map">
+
+                <div class="zone zone-green">
+                    🟢
+                </div>
+
+                <div class="zone zone-yellow">
+                    🟡
+                </div>
+
+                <div class="zone zone-orange">
+                    🟠
+                </div>
+
+                <div class="zone zone-red">
+                    🔴
+                </div>
+
+                <div class="location">
+                    📍 منطقة المراقبة
+                </div>
+
+            </div>
+
+
+            <div class="legend">
+
+                <span>🟢 منخفض</span>
+
+                <span>🟡 متوسط</span>
+
+                <span>🟠 مرتفع</span>
+
+                <span>🔴 حرج</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- التنبيهات -->
+        <section class="alerts">
+
+            <h2>🚨 آخر التنبيهات</h2>
+
+
+            <div class="alert">
+
+                <strong>🟠 خطر مرتفع</strong>
+
+                <p>
+                    ارتفاع درجة الحرارة وانخفاض الرطوبة
+                    في منطقة المراقبة.
+                </p>
+
+                <small>
+                    منذ 5 دقائق
+                </small>
+
+            </div>
+
+
+            <div class="alert">
+
+                <strong>🔴 تنبيه حرج</strong>
+
+                <p>
+                    قراءة غير طبيعية من المستشعر
+                    BioSense-03.
+                </p>
+
+                <small>
+                    منذ 12 دقيقة
+                </small>
+
+            </div>
+
+
+            <div class="alert">
+
+                <strong>🟢 النظام يعمل</strong>
+
+                <p>
+                    جميع المستشعرات النشطة متصلة
+                    بالنظام.
+                </p>
+
+                <small>
+                    منذ 20 دقيقة
+                </small>
+
+            </div>
+
+        </section>
+
+
+        <!-- حالة المنظومة -->
+        <section class="dashboard">
+
+            <h2>⚙️ حالة المنظومة</h2>
+
+            <p>
+                📡 المستشعرات النشطة:
+                <strong>24</strong>
+            </p>
+
+            <p>
+                🚨 التنبيهات:
+                <strong>3</strong>
+            </p>
+
+            <p>
+                🟢 حالة النظام:
+                <strong>يعمل بشكل طبيعي</strong>
+            </p>
+
+            <p>
+                🕒 آخر تحديث:
+                <strong>الآن</strong>
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- أسفل الصفحة -->
+    <footer>
+
+        <p>
+            🌲 SAHER BioSense AI
+        </p>
+
+        <p>
+            Detect Risk • Protect Forests
+        </p>
+
+        <p>
+            © 2026 SAHER
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
